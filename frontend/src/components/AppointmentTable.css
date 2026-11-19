@@ -1,0 +1,55 @@
+
+.appointment-table {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.appointment-table h3 {
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.appointment-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.appointment-table th,
+.appointment-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.appointment-table th {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.appointment-table td {
+    color: #374151;
+    font-size: 14px;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.status.approved {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.status.pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status.completed {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}

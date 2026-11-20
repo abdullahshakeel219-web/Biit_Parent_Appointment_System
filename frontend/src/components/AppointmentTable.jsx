@@ -1,31 +1,8 @@
 
 import "./AppointmentTable.css";
+import StatusBadge from "./StatusBadge";
 
-function AppointmentTable() {
-
-    const appointments = [
-        {
-            id: 1,
-            teacher: "Ali Ahmed",
-            date: "20 Nov 2026",
-            time: "10:00 AM",
-            status: "Approved"
-        },
-        {
-            id: 2,
-            teacher: "Usman Khan",
-            date: "21 Nov 2026",
-            time: "11:30 AM",
-            status: "Pending"
-        },
-        {
-            id: 3,
-            teacher: "Ahmed Hassan",
-            date: "22 Nov 2026",
-            time: "02:00 PM",
-            status: "Completed"
-        }
-    ];
+function AppointmentTable({ appointments = [] }) {
 
     return (
         <div className="appointment-table">
@@ -43,19 +20,18 @@ function AppointmentTable() {
                 </thead>
 
                 <tbody>
-                    {appointments.map((appointment) => (
-                        <tr key={appointment.id}>
-                            <td>{appointment.teacher}</td>
-                            <td>{appointment.date}</td>
-                            <td>{appointment.time}</td>
+                    {appointments.map((a) => (
+                        <tr key={a.id}>
+                            <td>{a.teacher}</td>
+                            <td>{a.date}</td>
+                            <td>{a.time}</td>
                             <td>
-                                <span className={`status ${appointment.status.toLowerCase()}`}>
-                                    {appointment.status}
-                                </span>
+                                <StatusBadge status={a.status} />
                             </td>
                         </tr>
                     ))}
                 </tbody>
+
             </table>
 
         </div>
